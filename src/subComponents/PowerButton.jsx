@@ -19,6 +19,8 @@ const PowerButton = () => {
     <>
       <Power>
         <svg
+          height={50}
+          width={50}
           aria-hidden="true"
           focusable="false"
           data-prefix="fas"
