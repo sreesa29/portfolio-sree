@@ -7,4 +7,4 @@ function MySkillsPage() {
     </>
   );
 }
-export default Main();
+export default MySkillsPage();
