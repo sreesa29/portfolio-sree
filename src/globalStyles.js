@@ -17,6 +17,6 @@ overflow-x:hidden;
 font-family:"Source Sans Pro", san-serif;
 }
 
-`;
+`
 
 export default GlobalStyle;
