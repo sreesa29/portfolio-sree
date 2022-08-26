@@ -8,4 +8,4 @@ function WorkPage() {
     </>
   );
 }
-export default WorkPage();
+export default WorkPage;
