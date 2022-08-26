@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app.jsx";
 import { HelmetProvider } from 'react-helmet-async';
+import "../node_modules/normalize.css"
 
 /**
 * Root of react site 
