@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PowerButton from "./subComponents/PowerButton.jsx"
+import PowerButton from "../subComponents/PowerButton.jsx"
 
 const MainContainer = styled.div`
 background: ${(props) => props.theme.body}
