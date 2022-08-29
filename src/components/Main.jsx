@@ -132,7 +132,7 @@ function Main() {
 
         <Container>
           <PowerButton />
-          <LogoComponent />
+          <LogoComponent theme= {click ? "dark" : "light" } />
           <SocialIcons theme= {click ? "dark" : "light" }/>
           
 
@@ -159,6 +159,7 @@ function Main() {
             </SKILLS>
           </BottomBar>
         </Container>
+        {click ? <Intro click={click} /> : null}
       </MainContainer>
     </>
   );
