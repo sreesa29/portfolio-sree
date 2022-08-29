@@ -3,6 +3,8 @@ import styled from "styled-components";
 import PowerButton from "../subComponents/PowerButton.jsx"
 import LogoComponent from "../subComponents/LogoComponent.jsx"
 import SocialIcons from "../subComponents/SocialIcons.jsx"
+import { Link } from "react-router-dom-v5-compat";
+
 
 const MainContainer = styled.div`
 background: ${(props) => props.theme.body}
@@ -21,6 +23,11 @@ const Container = styled.div`
   padding: 2rem;
 `;
 
+
+const Contact  = styled(Link)`
+color: ${props => props.theme.text}
+`
+
 function Main() {
   return (
     <>
@@ -29,6 +36,10 @@ function Main() {
           <PowerButton />
           <LogoComponent />
           <SocialIcons />
+          <Contact target="_blank" to={{pathname: "mailto:sreesankar29@gmail.com"}}>
+            <h3> Say hi...
+            </h3>
+          </Contact>
         </Container>
       </MainContainer>
     </>
