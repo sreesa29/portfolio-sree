@@ -24,7 +24,16 @@ const Container = styled.div`
 `;
 
 
-const Contact  = styled(Link)`
+const Contact  = styled.a`
+color: ${props => props.theme.text};
+position: absolute;
+top: 2rem;
+right: calc(1rem + 2vw);
+text-decoration: none;
+z-index:1;
+`
+
+const Blog  = styled(Link)`
 color: ${props => props.theme.text};
 position: absolute;
 top: 2rem;
@@ -41,10 +50,14 @@ function Main() {
           <PowerButton />
           <LogoComponent />
           <SocialIcons />
-          <Contact target="_blank" to={{pathname: "mailto:sreesankar29@gmail.com"}}>
+          <Contact target="_blank" href= "mailto:sreesankar29@gmail.com">
             <h3> Say hi...
             </h3>
           </Contact>
+          <Blog target="_blank" to= "/blog">
+            <h3> Blog
+            </h3>
+          </Blog>
         </Container>
       </MainContainer>
     </>
