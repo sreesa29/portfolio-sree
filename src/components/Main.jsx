@@ -42,7 +42,7 @@ const BLOG = styled(Link)`
 `;
 
 const WORK = styled(Link)`
-  color: ${(props) => props.theme.text};
+  color: ${props => props.click ? props.theme.body : props.theme.text};
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -60,7 +60,7 @@ const BottomBar = styled.div`
   justify-content: space-evenly;
 `;
 const ABOUT = styled(Link)`
-  color: ${(props) => props.theme.text};
+ color: ${props => props.click ? props.theme.body : props.theme.text};
   text-decoration: none;
   z-index: 1;
 `;
@@ -104,6 +104,19 @@ const Center = styled.button`
   }
 `;
 
+const DarkDiv = styled.div`
+position: absolute;
+background-color:#000;
+top:0;
+bottom:0;
+right:50%;
+width:${props => props.click ? "50%" : "0%"};
+height:${props => props.click ? "100%" : "0%"};;
+z-index:1;
+transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
+
 function Main() {
   
   const [click, setClick] = useState(false)
@@ -115,10 +128,13 @@ function Main() {
   return (
     <>
       <MainContainer>
+                  <DarkDiv click={click} />
+
         <Container>
           <PowerButton />
           <LogoComponent />
           <SocialIcons />
+          
 
           <Center click={click}>
             <YinYang onClick={()=>handleClick()} width={click ? 120:200} height={click ? 120:200} fill="currentColor" />
@@ -131,11 +147,11 @@ function Main() {
           <BLOG to="/blog">
             <h2> Blog</h2>
           </BLOG>
-          <WORK to="/work">
+          <WORK to="/work" click={click}>
             <h2> Work</h2>
           </WORK>
           <BottomBar>
-            <ABOUT to="/about">
+            <ABOUT to="/about" click={click}>
               <h2> About.</h2>
             </ABOUT>
             <SKILLS to="/skills">
