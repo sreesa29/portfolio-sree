@@ -41,6 +41,16 @@ text-decoration: none;
 z-index:1;
 `
 
+const WORK  = styled(Link)`
+color: ${props => props.theme.text};
+position: absolute;
+top: 50%;
+right: calc(1rem + 2vw);
+transform: rotate(90deg) translate(-50%,-50%)
+text-decoration: none;
+z-index:1;
+`
+
 function Main() {
   return (
     <>
@@ -57,6 +67,10 @@ function Main() {
             <h3> Blog
             </h3>
           </BLOG>
+           <WORK to= "/work">
+            <h3> w
+            </h3>
+          </WORK>
         </Container>
       </MainContainer>
     </>
