@@ -133,7 +133,7 @@ function Main() {
         <Container>
           <PowerButton />
           <LogoComponent />
-          <SocialIcons />
+          <SocialIcons theme= {click ? "dark" : "light" }/>
           
 
           <Center click={click}>

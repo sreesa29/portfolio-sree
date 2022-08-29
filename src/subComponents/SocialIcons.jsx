@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import { Github, Twitter, Facebook, YouTube } from "../components/AllSvgs.jsx";
-
+import {darkTheme} from "../components/Themes.jsx"
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,7 +21,7 @@ const Line = styled.span`
   background-color: ${(props) => props.theme.text};
 `;
 
-const SocialIcons = () => {
+const SocialIcons = (props) => {
   return (
     <Icons>
       <div>
@@ -31,7 +30,7 @@ const SocialIcons = () => {
           href="https://github.com/sreesa29"
           target="_blank"
         >
-          <Github width={25} height={25} fill="currentColor" />
+          <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
         </a>
       </div>
 
@@ -42,7 +41,7 @@ const SocialIcons = () => {
           target="_blank"
         >
           {" "}
-          <Twitter width={25} height={25} fill="currentColor" />
+          <Twitter width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
         </a>
       </div>
 
@@ -52,7 +51,7 @@ const SocialIcons = () => {
           href="https://facebook.com/"
           target="_blank"
         >
-          <Facebook width={25} height={25} fill="currentColor" />
+          <Facebook width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
         </a>
       </div>
 
@@ -62,7 +61,7 @@ const SocialIcons = () => {
           href="https://youtube.com/"
           target="_blank"
         >
-          <YouTube width={25} height={25} fill="currentColor" />
+          <YouTube width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
         </a>
       </div>
       <Line />
