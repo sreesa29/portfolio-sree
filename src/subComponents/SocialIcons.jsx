@@ -11,8 +11,9 @@ const Icons = styled.div`
   bottom:0;
   left:2rem;
   z-index:3;
-  $>*:not(:last-child){
-  margin: 0
+  
+  &>*:not(:last-child){
+       margin: 0.5rem 0;
   }
 `;
 
@@ -20,7 +21,6 @@ const Line = styled.span`
  width:2px;
  height:8rem;
  background-color:${props=>props.theme.text}
-  z-index:3;
 `;
 
 const SocialIcons = () => {
@@ -29,7 +29,7 @@ const SocialIcons = () => {
       
       <div>
         <Link to="/">
-        <Github width={25} height={25} fill="currentColor"  />
+        <Github style={{color:"inherit"}} width={25} height={25} fill="currentColor"  />
         </Link>
       </div>
       
