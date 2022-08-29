@@ -5,6 +5,8 @@ import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
 import { Link } from "react-router-dom-v5-compat";
 import { YinYang } from "../components/AllSvgs.jsx";
+import Intro from "./Intro.jsx";
+
 
 const MainContainer = styled.div`
 background: ${(props) => props.theme.body}
