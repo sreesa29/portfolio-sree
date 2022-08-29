@@ -28,9 +28,9 @@ const SocialIcons = () => {
     <Icons>
       
       <div>
-        <Link style={{color:"inherit"}} target="_blank" to={{pathname:"https://github.com/sreesa_29/"}}>
+        <NavLink style={{color:"inherit"}} target="_blank" to={{pathname:"https://github.com/sreesa_29"}}>
         <Github width={25} height={25} fill="currentColor"  />
-        </Link>
+        </NavLink>
       </div>
       
        <div>
