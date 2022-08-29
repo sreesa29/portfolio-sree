@@ -31,6 +31,18 @@ const Box = styled.div`
 
 `;
 function Intro(props) {
-  return (<Box>Introduction</Box>);
+  return (
+    <Box>
+      <SubBox>
+        <Text><h1>Hi,</h1>
+          <h3>My Name is Sree Sankar.</h3>
+          <h6>I design and code Full Stack Web Applications.</h6>
+        </Text>
+      </SubBox>
+       <SubBox>
+        <img src />
+      </SubBox>
+    </Box>
+  );
 }
 export default Intro;
