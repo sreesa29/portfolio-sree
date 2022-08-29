@@ -11,7 +11,9 @@ const Logo = styled.h1`
   z-index: 3;
 `;
 
-const LogoComponent = () => {
-  return <Logo>Sree Sankar</Logo>;
+const SocialIcons = () => {
+  return(
+    <Logo>Sree Sankar</Logo>
+  );
 };
-export default LogoComponent;
+export default SocialIcons;
