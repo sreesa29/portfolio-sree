@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import PowerButton from "../subComponents/PowerButton.jsx";
 import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
@@ -53,12 +53,11 @@ const WORK = styled(Link)`
 const BottomBar = styled.div`
   position: absolute;
   bottom: 1rem;
-  left:0;
+  left: 0;
   right: 0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  
 `;
 const ABOUT = styled(Link)`
   color: ${(props) => props.theme.text};
@@ -70,6 +69,16 @@ const SKILLS = styled(Link)`
   text-decoration: none;
   z-index: 1;
 `;
+
+const rotate = keyframes`
+from{
+transform: rotate(0deg);
+}
+to{
+transform: rotate(360deg);
+}
+`;
+
 const Center = styled.button`
   position: absolute;
   top: 50%;
@@ -82,15 +91,21 @@ const Center = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
-  &>:last-child{
-  padding-top: 1rem;
+  align-items: center;
+
+  & > :first-child {
+    animation: ${rotate} infinite 1.5s linear;
   }
-  
+
+  & > :last-child {
+    padding-top: 1rem;
+  }
 `;
 
-
 function Main() {
+  
+  const [setClick, Click] = useState(false)
+  
   return (
     <>
       <MainContainer>
@@ -98,14 +113,12 @@ function Main() {
           <PowerButton />
           <LogoComponent />
           <SocialIcons />
-          
+
           <Center>
-          
-                    <YinYang width={150} height={150} fill="currentColor" />
+            <YinYang width={200} height={200} fill="currentColor" />
             <span>click here</span>
           </Center>
-          
-          
+
           <Contact target="_blank" href="mailto:sreesankar29@gmail.com">
             <h2> Say hi...</h2>
           </Contact>
