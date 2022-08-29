@@ -4,6 +4,7 @@ import PowerButton from "../subComponents/PowerButton.jsx";
 import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
 import { Link } from "react-router-dom-v5-compat";
+import { YinYang } from "../components/AllSvgs.jsx";
 
 const MainContainer = styled.div`
 background: ${(props) => props.theme.body}
@@ -69,7 +70,24 @@ const SKILLS = styled(Link)`
   text-decoration: none;
   z-index: 1;
 `;
-
+const Center = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  &>:last-child{
+  padding-top: 1rem;
+  }
+  
+`;
 
 
 function Main() {
@@ -80,6 +98,14 @@ function Main() {
           <PowerButton />
           <LogoComponent />
           <SocialIcons />
+          
+          <Center>
+          
+                    <YinYang width={150} height={150} fill="currentColor" />
+            <span>click here</span>
+          </Center>
+          
+          
           <Contact target="_blank" href="mailto:sreesankar29@gmail.com">
             <h2> Say hi...</h2>
           </Contact>
