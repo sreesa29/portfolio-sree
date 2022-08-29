@@ -1,19 +1,57 @@
 import React from "react";
 import styled from "styled-components";
+import { Github, Twitter, Facebook, YouTube } from "../components/AllSvgs.jsx";
+import { Link } from "react-router-dom-v5-compat";
 
-const Logo = styled.h1`
-  display: inline-block;
-  color: ${(props) => props.theme.text};
-  font-family: "Pacifico", cursive;
+const Icons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
-  left: 2rem;
-  top: 2rem;
-  z-index: 3;
+  bottom:0;
+  left:2rem;
+  z-index:3;
+  $>*:not(:last-child){
+  margin: 0
+  }
+`;
+
+const Line = styled.span`
+ width:2px;
+ height:8rem;
+ background-color:${props=>props.theme.text}
+  z-index:3;
 `;
 
 const SocialIcons = () => {
   return(
-    <Logo>Sree Sankar</Logo>
+    <Icons>
+      
+      <div>
+        <Link to="/">
+        <Github width={25} height={25} fill="currentColor"  />
+        </Link>
+      </div>
+      
+       <div>
+        <Link to="/">
+        <Twitter width={25} height={25} fill="currentColor"  />
+        </Link>
+      </div>
+      
+      <div>
+        <Link to="/">
+        <Facebook width={25} height={25} fill="currentColor"  />
+        </Link>
+      </div>
+      
+      <div>
+        <Link to="/">
+        <YouTube width={25} height={25} fill="currentColor"  />
+        </Link>
+      </div>
+    <Line />
+    </Icons>
   );
 };
 export default SocialIcons;
