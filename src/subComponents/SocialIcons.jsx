@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Github, Twitter, Facebook, YouTube } from "../components/AllSvgs.jsx";
-import { Link, NavLink } from "react-router-dom-v5-compat";
+import { Link } from "react-router-dom-v5-compat";
 
 const Icons = styled.div`
   display: flex;
@@ -28,9 +28,9 @@ const SocialIcons = () => {
     <Icons>
       
       <div>
-        <NavLink style={{color:"inherit"}} target="_blank" to={{pathname:"https://github.com/sreesa_29"}}>
+        <Link style={{color:"inherit"}} to={{ pathname:"https://github.com/sreesa_29/" }}  target="_blank">
         <Github width={25} height={25} fill="currentColor"  />
-        </NavLink>
+        </Link>
       </div>
       
        <div>
