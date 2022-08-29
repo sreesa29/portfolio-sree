@@ -14,14 +14,14 @@ const Box = styled.div`
   background-size: 100% 2px;
   background: linear-gradient(
         to right,
-        ${props => props.theme.body}50%,
-        ${props => props.theme.text}50%
+        ${props => props.theme.body} 50%,
+        ${props => props.theme.text} 50%
       )
       bottom,
     linear-gradient(
         to right,
-        ${props => props.theme.body}50%,
-        ${props => props.theme.text}50%
+        ${props => props.theme.body} 50%,
+        ${props => props.theme.text} 50%
       )
       top;
       z-index: 1;
