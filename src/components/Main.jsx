@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PowerButton from "../subComponents/PowerButton.jsx"
+import LogoComponent from "../subComponents/LogoComponent.jsx"
 
 const MainContainer = styled.div`
 background: ${(props) => props.theme.body}
@@ -23,7 +24,10 @@ function Main() {
   return (
     <>
       <MainContainer>
-        <Container><PowerButton /></Container>
+        <Container>
+          <PowerButton />
+          <LogoComponent />
+        </Container>
       </MainContainer>
     </>
   );
