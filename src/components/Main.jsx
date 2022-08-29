@@ -18,11 +18,9 @@ font-weight:500;
 }
 `;
 
-
 const Container = styled.div`
   padding: 2rem;
 `;
-
 
 const Contact  = styled.a`
 color: ${props => props.theme.text};
@@ -33,11 +31,12 @@ text-decoration: none;
 z-index:1;
 `
 
-const Blog  = styled(Link)`
+const BLOG  = styled(Link)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 2rem;
+top: 50%;
 right: calc(1rem + 2vw);
+transform: rotate(90deg) translate(-50%,-50%)
 text-decoration: none;
 z-index:1;
 `
@@ -48,16 +47,16 @@ function Main() {
       <MainContainer>
         <Container>
           <PowerButton />
-          <LogoComponent />
+          <LogoComponent /> 
           <SocialIcons />
           <Contact target="_blank" href= "mailto:sreesankar29@gmail.com">
             <h3> Say hi...
             </h3>
           </Contact>
-          <Blog target="_blank" to= "/blog">
+          <BLOG to= "/blog">
             <h3> Blog
             </h3>
-          </Blog>
+          </BLOG>
         </Container>
       </MainContainer>
     </>
