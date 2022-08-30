@@ -10,9 +10,16 @@ const Box = styled.a`
 
 const Image = styled.div`
 background-image: ${props=> `url(${props.img})`};
-width:100%;
-height:60%;
-backgund
+width: 100%;
+height: 60%;
+background-size: cover;
+border: 1px solid transparent;
+background-position: center center;
+`;
+
+const Title = styled.h3`
+color: inherit;
+
 `;
 
 function BlogComponent(props) {
@@ -21,7 +28,8 @@ function BlogComponent(props) {
   
   return (
     <Box href={`${link}`} target="_blank">
-        <Image img={imgSrc} />
+      <Image img={imgSrc} />
+      <Title>{name}</Title>
     </Box>
   )
 }
