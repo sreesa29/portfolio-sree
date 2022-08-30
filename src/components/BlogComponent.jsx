@@ -2,16 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom-v5-compat";
 
-const Container = styled(Link)`
-   width: calc(10rem + 15vw);
-    
+const Box = styled(Link)`
+  width: calc(10rem + 15vw);
+  text-decoration: none;
+  height: 20rem;
+  padding: 1rem;
 `;
 
 function BlogComponent(props) {
   return (
-    <Container>
-      
-    </Container>
-  );
+    <Box>
+        Blog Item
+    </Box>
+  )
 }
 export default BlogComponent;
