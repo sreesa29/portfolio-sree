@@ -72,7 +72,7 @@ function Intro(props) {
       <SubBox>
         <Text>
           <h1>Hi,</h1>
-          <h3>My Name is Sree Sankar.</h3>
+          <h3>My name is Sree Sankar.</h3>
           <h6>I design and code Full Stack Web Applications.</h6>
         </Text>
       </SubBox>
