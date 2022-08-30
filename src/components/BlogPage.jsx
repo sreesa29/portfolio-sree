@@ -5,6 +5,7 @@ import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
 import { Blogs } from "../data/BlogData.js";
 import BlogComponent from "./BlogComponent";
+import AnchorComponent from "../subComponents/Anchor.jsx";
 
 const MainContainer = styled.div`
   background-image: url("https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
@@ -42,6 +43,7 @@ function BlogPage() {
         <LogoComponent />
         <PowerButton />
         <SocialIcons />
+        <AnchorComponent />
         <Center>
           <Grid>
             {Blogs.map((blog) => {
