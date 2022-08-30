@@ -29,10 +29,9 @@ const Image = styled.div`
   background-size: cover;
   border: 1px solid transparent;
   background-position: center center;
-  &{Box}:hover {
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.text};
-    transition: all 0.7s ease;
+  
+ ${Box}:hover & {
+    border: 1px solid ${(props) => props.theme.body};
   }
   
 `;
@@ -44,6 +43,9 @@ const Title = styled.h3`
   font-family: "Karla", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
+  ${Box}:hover & {
+  border-bottom: 1px solid ${(props) => props.theme.body};
+  }
 `;
 const HashTags = styled.div`
   padding: 0.5rem 0;
