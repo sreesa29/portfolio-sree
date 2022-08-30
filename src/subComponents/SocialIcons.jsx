@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Github, Twitter, Facebook, YouTube } from "../components/AllSvgs.jsx";
-import {darkTheme} from "../components/Themes.jsx"
+import { darkTheme } from "../components/Themes.jsx";
+import { motion } from "framer-motion";
+
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,52 +20,69 @@ const Icons = styled.div`
 const Line = styled.span`
   width: 2px;
   height: 8rem;
-  background-color: ${props => props.color === "dark" ? darkTheme.text : darkTheme.body};
+  background-color: ${(props) =>
+    props.color === "dark" ? darkTheme.text : darkTheme.body};
 `;
 
 const SocialIcons = (props) => {
   return (
     <Icons>
-      <div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           href="https://github.com/sreesa29"
           target="_blank"
         >
-          <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
+          <Github
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           href="https://twitter.com/"
           target="_blank"
         >
           {" "}
-          <Twitter width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
+          <Twitter
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           href="https://facebook.com/"
           target="_blank"
         >
-          <Facebook width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
+          <Facebook
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           href="https://youtube.com/"
           target="_blank"
         >
-          <YouTube width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
+          <YouTube
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? darkTheme.text : darkTheme.body}
+          />
         </a>
-      </div>
+      </motion.div>
       <Line color={props.theme} />
     </Icons>
   );
