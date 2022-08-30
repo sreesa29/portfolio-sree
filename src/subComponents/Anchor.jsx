@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { Link, Anchor } from "../components/AllSvgs.jsx";
 
@@ -26,7 +26,17 @@ function AnchorComponent() {
   
   useEffect(()=>{
     
+    const handleScroll = () =>{
+      let scrollPosition = window.pageYOffset;
+      let windowSize = window.innerHeight;
+      let bod
+    }
     
+    
+    
+    
+    window.addEventListener('scroll', handleScroll)
+    return()=> window.remobeEventListener('scroll', handleScroll)
   },[])
 
   return (
