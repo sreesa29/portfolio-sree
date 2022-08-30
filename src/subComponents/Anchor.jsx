@@ -14,7 +14,7 @@ const Slider = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   .chain {
     transform: rotate(135deg);
   }
