@@ -13,6 +13,6 @@ const Logo = styled.h1`
 `;
 
 const LogoComponent = (props) => {
-  return <Logo color={props.theme}>Sree Sankar</Logo>;
+  return <Logo color={props.theme}>Sree.</Logo>;
 };
 export default LogoComponent;
