@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import PowerButton from "../subComponents/PowerButton.jsx";
 import LogoComponent from "../subComponents/LogoComponent.jsx";
@@ -6,7 +6,7 @@ import SocialIcons from "../subComponents/SocialIcons.jsx";
 import { Link } from "react-router-dom-v5-compat";
 import { YinYang } from "../components/AllSvgs.jsx";
 import Intro from "./Intro.jsx";
-
+import { motion } from "framer-motion";
 
 const MainContainer = styled.div`
 background: ${(props) => props.theme.body}
@@ -44,7 +44,7 @@ const BLOG = styled(Link)`
 `;
 
 const WORK = styled(Link)`
-  color: ${props => props.click ? props.theme.body : props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -62,7 +62,7 @@ const BottomBar = styled.div`
   justify-content: space-evenly;
 `;
 const ABOUT = styled(Link)`
- color: ${props => props.click ? props.theme.body : props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
 `;
@@ -83,8 +83,8 @@ transform: rotate(360deg);
 
 const Center = styled.button`
   position: absolute;
-  top: ${props => props.click ? "85%" : "50%"};
-  left:${props => props.click ? "92%" : "50%"};;
+  top: ${(props) => (props.click ? "85%" : "50%")};
+  left: ${(props) => (props.click ? "92%" : "50%")};
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -101,63 +101,66 @@ const Center = styled.button`
   }
 
   & > :last-child {
-  display: ${props => props.click ? "none" : "inline-block"};
+    display: ${(props) => (props.click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
 `;
 
 const DarkDiv = styled.div`
-position: absolute;
-background-color:#000;
-top:0;
-bottom:0;
-right:50%;
-width:${props => props.click ? "50%" : "0%"};
-height:${props => props.click ? "100%" : "0%"};;
-z-index:1;
-transition: height 0.5s ease, width 1s ease 0.5s;
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  width: ${(props) => (props.click ? "50%" : "0%")};
+  height: ${(props) => (props.click ? "100%" : "0%")};
+  z-index: 1;
+  transition: height 0.5s ease, width 1s ease 0.5s;
 `;
 
-
 function Main() {
-  
-  const [click, setClick] = useState(false)
-  
-  const handleClick = () =>{
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
     setClick(!click);
-  }
-  
+  };
+
   return (
     <>
       <MainContainer>
-                  <DarkDiv click={click} />
+        <DarkDiv click={click} />
 
         <Container>
           <PowerButton />
-          <LogoComponent theme= {click ? "dark" : "light" } />
-          <SocialIcons theme= {click ? "dark" : "light" }/>
-          
+          <LogoComponent theme={click ? "dark" : "light"} />
+          <SocialIcons theme={click ? "dark" : "light"} />
 
           <Center click={click}>
-            <YinYang onClick={()=>handleClick()} width={click ? 120:200} height={click ? 120:200} fill="currentColor" />
+            <YinYang
+              onClick={() => handleClick()}
+              width={click ? 120 : 200}
+              height={click ? 120 : 200}
+              fill="currentColor"
+            />
             <span>click here</span>
           </Center>
 
           <Contact target="_blank" href="mailto:sreesankar29@gmail.com">
-            <h2> Say hi...</h2>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Say hi...
+            </motion.h2>
           </Contact>
           <BLOG to="/blog">
-            <h2> Blog</h2>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> Blog</motion.h2>
           </BLOG>
           <WORK to="/work" click={click}>
-            <h2> Work</h2>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> Work</motion.h2>
           </WORK>
           <BottomBar>
             <ABOUT to="/about" click={click}>
-              <h2> About.</h2>
+              <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> About.</motion.h2>
             </ABOUT>
             <SKILLS to="/skills">
-              <h2> My Skills.</h2>
+              <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}> My Skills.</motion.h2>
             </SKILLS>
           </BottomBar>
         </Container>
