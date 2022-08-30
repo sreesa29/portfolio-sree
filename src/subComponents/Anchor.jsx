@@ -23,6 +23,11 @@ const Slider = styled.div`
 function AnchorComponent() {
   const ref = useRef(null);
   const hiddenRef = useRef(null);
+  
+  useEffect(()=>{
+    
+    
+  },[])
 
   return (
     <Container>
