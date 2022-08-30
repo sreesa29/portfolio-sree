@@ -29,11 +29,10 @@ function AnchorComponent() {
     const handleScroll = () =>{
       let scrollPosition = window.pageYOffset;
       let windowSize = window.innerHeight;
-      let bod
-    }
-    
-    
-    
+      let bodyHeight = document.body.offsetHeight;
+      let diff = Math.max(bodyHeight - (scrollPosition + windowSize))
+      let diffP = (diff * 100) / (bodyHeight - windowSize);
+    }    
     
     window.addEventListener('scroll', handleScroll)
     return()=> window.remobeEventListener('scroll', handleScroll)
