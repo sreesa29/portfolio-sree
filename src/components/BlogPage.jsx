@@ -19,8 +19,20 @@ width:100%;
 height:100vh;
 position: relative;
 padding-bottom: 5rem;
-
 `;
+
+const Center = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+padding-top: 10rem;
+`
+
+const Grid = styled.div`
+display:grid;
+grid-template-columns: repeat(2, minmax(calc(10rem + 15vw),1fr));
+`
+
 
 
 function BlogPage() {
@@ -30,6 +42,10 @@ function BlogPage() {
         <LogoComponent />
         <PowerButton />
         <SocialIcons />
+        <Center>
+        <Grid>
+        </Grid>
+        </Center>
       </Container>
       </MainContainer>
     
