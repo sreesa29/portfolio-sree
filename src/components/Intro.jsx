@@ -7,10 +7,9 @@ const Box = styled.div`
   transform: translate(-50%, -50%);
 
   width: 55vw;
-  height:40vh;
+
   display: flex;
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
+ 
   background: linear-gradient(
         to right,
         ${props => props.theme.body} 50%,
@@ -23,10 +22,11 @@ const Box = styled.div`
         ${props => props.theme.text} 50%
       )
       top;
-      z-index: 1;
-      
-      border-left: 2px solid ${props=> props.theme.body};
-      border-right: 2px solid ${props=> props.theme.text};
+       background-repeat: no-repeat;
+        background-size: 100% 2px;      
+        border-left: 2px solid ${props=> props.theme.body};
+        border-right: 2px solid ${props=> props.theme.text};
+        z-index: 1;
 `;
 
   const SubBox = styled.div`
