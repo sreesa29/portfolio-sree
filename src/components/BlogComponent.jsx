@@ -11,7 +11,7 @@ const Box = styled(Link)`
 
 function BlogComponent(props) {
   return (
-    <Box>
+    <Box to="/">
         Blog Item
     </Box>
   )
