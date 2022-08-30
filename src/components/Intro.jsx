@@ -9,57 +9,67 @@ const Box = styled.div`
   width: 55vw;
 
   display: flex;
- 
+
   background: linear-gradient(
         to right,
-        ${props => props.theme.body} 50%,
-        ${props => props.theme.text} 50%
+        ${(props) => props.theme.body} 50%,
+        ${(props) => props.theme.text} 50%
       )
       bottom,
     linear-gradient(
         to right,
-        ${props => props.theme.body} 50%,
-        ${props => props.theme.text} 50%
+        ${(props) => props.theme.body} 50%,
+        ${(props) => props.theme.text} 50%
       )
       top;
-       background-repeat: no-repeat;
-        background-size: 100% 2px;      
-        border-left: 2px solid ${props=> props.theme.body};
-        border-right: 2px solid ${props=> props.theme.text};
-        z-index: 1;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  border-left: 2px solid ${(props) => props.theme.body};
+  border-right: 2px solid ${(props) => props.theme.text};
+  z-index: 1;
 `;
 
-  const SubBox = styled.div`
-  width:50%;
+const SubBox = styled.div`
+  width: 50%;
   position: relative;
   display: flex;
-  .pic{
+  .pic {
     position: absolute;
-    bottom:0;
-    left:50%;
-    transform: translate(-50%,0%);
-    width:100%;
-    height:auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: auto;
   }
+`;
 
-  `
-  
-  const Text = styled.div`
+const Text = styled.div`
+  font-size: calc(1em + 1.5vw);
+  color: ${(props) => props.theme.body};
+  padding: 2rem;
+  cursor: pointer;
 
-  `
-  
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+
 function Intro(props) {
   return (
     <Box>
       <SubBox>
-        <Text><h1>Hi,</h1>
+        <Text>
+          <h1>Hi,</h1>
           <h3>My Name is Sree Sankar.</h3>
           <h6>I design and code Full Stack Web Applications.</h6>
         </Text>
       </SubBox>
-       <SubBox>
-        <img src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png" className="pic" alt="Profile Pic" />
+      <SubBox>
+        <img
+          src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png"
+          className="pic"
+          alt="Profile Pic"
+        />
       </SubBox>
     </Box>
   );
