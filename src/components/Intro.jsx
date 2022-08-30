@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 const Box = styled.div`
   position: absolute;
   left: 50%;
@@ -28,8 +27,28 @@ const Box = styled.div`
       
       border-left: 2px solid ${props=> props.theme.body};
       border-right: 2px solid ${props=> props.theme.text};
-
 `;
+
+  const SubBox = styled.div`
+  width:50%;
+  position: relative;
+  display: flex;
+  .pic{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translate(-50%,0%);
+    width:100%;
+    height:auto;
+  }
+
+  `
+  
+  const Text = styled.div`
+
+  `
+  
+  
 function Intro(props) {
   return (
     <Box>
@@ -40,7 +59,7 @@ function Intro(props) {
         </Text>
       </SubBox>
        <SubBox>
-        <img src />
+        <img src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png" className="pic" alt="Profile Pic" />
       </SubBox>
     </Box>
   );
