@@ -2,6 +2,9 @@ import React from "react";
 import { lightTheme } from "./Themes.jsx";
 import styled, { ThemeProvider } from "styled-components";
 import { Design, Develope } from "./AllSvgs.jsx";
+import LogoComponent from "../subComponents/LogoComponent.jsx";
+import SocialIcons from "../subComponents/SocialIcons.jsx";
+import PowerButton from "../subComponents/PowerButton.jsx";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -26,6 +29,12 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
+  &:hover{
+    color: ${(props) => props.theme.body};
+  background-color: ${(props) => props.theme.text};
+
+  }
 `;
 
 const Title = styled.h2`
@@ -33,19 +42,26 @@ const Title = styled.h2`
   justify-content: center;
   align-items: center;
   font-size: calc(1em + 1vw);
+  
+  &:hover{
+    color: ${(props) => props.theme.body};
+  background-color: ${(props) => props.theme.text};
+
+  }
 `;
 
 const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
-  
-  strong{
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+
+  strong {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
   }
-  ul,p{
-  margin-left: 2rem;
+  ul,
+  p {
+    margin-left: 2rem;
   }
 `;
 
@@ -53,6 +69,9 @@ function MySkillsPage(props) {
   return (
     <ThemeProvider theme={lightTheme}>
       <Box>
+        <LogoComponent theme='light' />
+        <SocialIcons theme='light'/>
+        <PowerButton />
         <Main>
           <Title>
             <Design width={40} height={40} /> Designer
@@ -64,8 +83,13 @@ function MySkillsPage(props) {
           <Description>
             <strong>I LIKE TO DESIGN</strong>
             <ul>
-              <li>Web Design</li>
+              <li>Web </li>
               <li>Canva</li>
+            </ul>
+          </Description>
+          <Description>
+            <strong>Tools</strong>
+            <ul>
               <li>Figma</li>
             </ul>
           </Description>
@@ -81,7 +105,14 @@ function MySkillsPage(props) {
           </Description>
           <Description>
             <strong>Skills</strong>
-            <p>HTML, CSS, JS, ReactJS, Node JS, Express, MongoDB, Bootstrap, Tailwind etc.</p>
+            <p>
+              HTML, CSS, JS, ReactJS, Node JS, Express, MongoDB, Bootstrap,
+              Tailwind etc.
+            </p>
+          </Description>
+          <Description>
+            <strong>Tools</strong>
+            <p>VS Code, Git, Glitch etc</p>
           </Description>
         </Main>
       </Box>
