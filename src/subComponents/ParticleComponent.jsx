@@ -5,9 +5,9 @@ import styled from "styled-components";
 function ParticleComponent(props) {
    
   return (
-    <MainContainer>
-     
-    </MainContainer>
+    <div>
+     Article Component
+    </div>
   );
 }
 export default ParticleComponent;
