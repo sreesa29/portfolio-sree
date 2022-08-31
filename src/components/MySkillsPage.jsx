@@ -39,6 +39,14 @@ const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
+  
+  strong{
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  }
+  ul,p{
+  margin-left: 2rem;
+  }
 `;
 
 function MySkillsPage(props) {
@@ -53,6 +61,14 @@ function MySkillsPage(props) {
             I love to create design which speaks, Keep it clean, minimal and
             simple.
           </Description>
+          <Description>
+            <strong>I LIKE TO DESIGN</strong>
+            <ul>
+              <li>Web Design</li>
+              <li>Canva</li>
+              <li>Figma</li>
+            </ul>
+          </Description>
         </Main>
 
         <Main>
@@ -62,6 +78,10 @@ function MySkillsPage(props) {
           <Description>
             I value business or brand for which i'm creating, thus i enjoy
             bringing new ideas to life.
+          </Description>
+          <Description>
+            <strong>Skills</strong>
+            <p>HTML, CSS, JS, ReactJS, Node JS, Express, MongoDB, Bootstrap, Tailwind etc.</p>
           </Description>
         </Main>
       </Box>
