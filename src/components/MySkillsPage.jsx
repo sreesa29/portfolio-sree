@@ -5,7 +5,7 @@ import { Design, Develope } from "./AllSvgs.jsx";
 import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
 import PowerButton from "../subComponents/PowerButton.jsx";
-
+import ParticleComponent from "../subComponents/ParticleComponent.jsx";
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
@@ -80,6 +80,7 @@ function MySkillsPage(props) {
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
         <PowerButton />
+        <ParticleComponent theme='light' />
         <Main>
           <Title>
             <Design width={40} height={40} /> Designer
