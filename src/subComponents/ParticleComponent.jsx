@@ -21,7 +21,7 @@ function ParticleComponent(props) {
    
   return (
     <Box>
-       <Particles params={props.theme === "light" ? configLight : configDark} />
+       <Particles options={props.theme === "light" ? configLight : configDark} />
     </Box>
   );
 }
