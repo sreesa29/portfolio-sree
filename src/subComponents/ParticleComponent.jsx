@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Particles from 'react-particles-js'
 import styled from "styled-components";
-
+import {params} from 
 //particle config
 
 import configDark from "../config/particlesjs-config.json";
