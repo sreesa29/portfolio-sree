@@ -18,7 +18,14 @@ const Slider = styled.div`
   .chain {
     transform: rotate(135deg);
   }
-`;
+`;  
+  const PreDisplay = styled.div`
+  position: absolute;
+  top:0;
+  right: 2rem;
+  `
+ 
+
 
 function AnchorComponent() {
   const ref = useRef(null);
@@ -33,6 +40,14 @@ function AnchorComponent() {
       let diff = Math.max(bodyHeight - (scrollPosition + windowSize))
       let diffP = (diff * 100) / (bodyHeight - windowSize);
       ref.current.style.transform = `translateY(${-diffP}%)`
+      
+      if(window.pageYOffset > 5){
+        hiddenRef.current.style.display ="none";
+      }else{
+                hiddenRef.current.style.display ="block";
+
+      }
+      
     }    
     
     window.addEventListener('scroll', handleScroll)
@@ -41,6 +56,9 @@ function AnchorComponent() {
 
   return (
     <Container>
+      <PreDisplay ref={hiddenRef} className="hidden">
+        
+      </PreDisplay>
       <Slider ref={ref}>
         {[...Array(25)].map((x, id) => {
           return (
