@@ -33,7 +33,7 @@ function AnchorComponent() {
   
   useEffect(()=>{
     
-    const handleScroll = () =>{
+    const handleScroll = (props) =>{
       let scrollPosition = window.pageYOffset;
       let windowSize = window.innerHeight;
       let bodyHeight = document.body.offsetHeight;
