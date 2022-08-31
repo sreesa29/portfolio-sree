@@ -41,10 +41,10 @@ function AnchorComponent() {
       let diffP = (diff * 100) / (bodyHeight - windowSize);
       ref.current.style.transform = `translateY(${-diffP}%)`
       
-      if(window.pageYOffset > 5){
-        hiddenRef.current.style.display ="none";
+      if(window.pageYOffset > 5){ 
+        hiddenRef.current.style.display = "none";
       }else{
-                hiddenRef.current.style.display ="block";
+       hiddenRef.current.style.display = "block";
 
       }
       
@@ -57,7 +57,8 @@ function AnchorComponent() {
   return (
     <Container>
       <PreDisplay ref={hiddenRef} className="hidden">
-        
+                <Anchor width={70} height={70} fill="currentColor" />
+
       </PreDisplay>
       <Slider ref={ref}>
         {[...Array(25)].map((x, id) => {
