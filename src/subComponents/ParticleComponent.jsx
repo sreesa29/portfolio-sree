@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 //particle config
 
-import configDark from "../config/particlejs-config.json";
-import configLight from "../config/particlejs-config-light.json";
+import configDark from "../config/particlesjs-config.json";
+import configLight from "../config/particlesjs-config-light.json";
 
 
 
