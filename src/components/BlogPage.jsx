@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import PowerButton from "../subComponents/PowerButton.jsx";
 import LogoComponent from "../subComponents/LogoComponent.jsx";
@@ -36,14 +36,21 @@ const Grid = styled.div`
   grid-gap: calc(1rem + 2vw);
 `;
 
-function BlogPage() {
+function BlogPage(props) {
+  
+  const[numbers, setNumbers] = useState(0);
+  useEffect(()=>{
+    let num = (window.innerHeight - 70)/30;
+    setNumbers(parseInt(num));
+  })
+  
   return (
     <MainContainer>
       <Container>
         <LogoComponent />
         <PowerButton />
         <SocialIcons />
-        <AnchorComponent />
+        <AnchorComponent numbers={numbers} />
         <Center>
           <Grid>
             {Blogs.map((blog) => {
