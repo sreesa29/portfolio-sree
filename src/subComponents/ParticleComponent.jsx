@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
-import Particles from 'react-particles-js'
+// import Particles from 'react-particles-js'
 import styled from "styled-components";
-import {params} from "react-router-dom-v5-compat";
 //particle config
 
 import configDark from "../config/particlesjs-config.json";
@@ -22,7 +21,6 @@ function ParticleComponent(props) {
    
   return (
     <Box>
-       <Particles params={props.theme === "light" ? configLight : configDark} />
     </Box>
   );
 }
