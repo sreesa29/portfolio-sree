@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./globalStyles.js";
+import GlobalStyle from "./globalStyles.jsx";
 import { darkTheme, lightTheme } from "./components/Themes.jsx";
 import { Routes, Route } from "react-router-dom-v5-compat";
 //components
@@ -17,19 +17,19 @@ export default function Home() {
   return (
     <>
       <GlobalStyle />
-    <SoundBar />
-<AnimatePresence exitBeforeEnter>
-      <ThemeProvider theme={lightTheme}>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/work" element={<WorkPage />} />
-          <Route path="/skills" element={<MySkillsPage />} />
-        </Routes>
-        </ThemeProvider>
 
-  </AnimatePresence>
+      <ThemeProvider theme={lightTheme}>
+        <SoundBar />
+        <AnimatePresence exitBeforeEnter>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/work" element={<WorkPage />} />
+            <Route path="/skills" element={<MySkillsPage />} />
+          </Routes>
+        </AnimatePresence>
+      </ThemeProvider>
     </>
   );
 }
