@@ -1,11 +1,13 @@
 import React from "react";
+import styled, { keyframes, ThemeProvider } from "styled-components";
 import { darkTheme } from "./Themes.jsx";
-import styled, { ThemeProvider, keyframes } from "styled-components";
-import { Design, Develope } from "./AllSvgs.jsx";
+
 import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
 import PowerButton from "../subComponents/PowerButton.jsx";
 import ParticleComponent from "../subComponents/ParticleComponent.jsx";
+import BigTitle from "../subComponents/BigTitlte.jsx";
+
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
@@ -13,14 +15,12 @@ const Box = styled.div`
   position: relative;
   overflow: hidden;
 `;
-
 const float = keyframes`
-0% {transform : translateY(-10px)}
-50% {transform : translateY(15px) translateX(15px)}
-100% {transform : translateY(-10px)}
+0% { transform: translateY(-10px) }
+50% { transform: translateY(15px) translateX(15px) }
+100% { transform: translateY(-10px) }
 `;
-
-const Sapceman = styled.div`
+const Spaceman = styled.div`
   position: absolute;
   top: 10%;
   right: 5%;
@@ -31,33 +31,28 @@ const Sapceman = styled.div`
     height: auto;
   }
 `;
-
 const Main = styled.div`
-color: ${(props) => props.theme.text};
-border: 2px solid ${(props) => props.theme.text};
-padding: 2rem;
-width: 50vw;
-height:60vh;
-z-index:3;
-line-height: 1.5;
+  border: 2px solid ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text};
+  padding: 2rem;
+  width: 50vw;
+  height: 60vh;
+  z-index: 3;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(0.6rem + 1vw);
+  backdrop-filter: blur(4px);
 
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: calc(0.6rem + 1vw);
-backdrop-filter: blur(4px);
+  position: absolute;
+  left: calc(5rem + 5vw);
+  top: 10rem;
+  font-family: "Ubuntu Mono", monospace;
+  font-style: italic;
+`;
 
-position: absolute;
-left: calc(5rem + 5vw);
-top: 10rem;
-
-font-family: 'Ubuntu Mono', monospace;
-font-style: italic;
-
-`
-
-
-function AboutPage(props) {
+const AboutPage = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box>
@@ -65,25 +60,27 @@ function AboutPage(props) {
         <SocialIcons theme="dark" />
         <PowerButton />
         <ParticleComponent theme="dark" />
-        <Sapceman>
-          <img
-            src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/spaceman.png"
-            alt="spacmanpic"
-          />
-        </Sapceman>
+
+        <Spaceman>
+          <img src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/spaceman.png" alt="spaceman" />
+        </Spaceman>
+
         <Main>
-          I'm a full stack developer located in India. I love to create 
+          I'm a full stack developer located in India. I love to create
           beautiful websites with great user experience.
           <br />
-          <br /> I'm interested in the whole frontend and backend stack Like trying new
-          things and building great projects. I'm an independent freelancer and
-          blogger. <br />
+          <br /> I'm interested in the whole frontend and backend stack Like
+          trying new things and building great projects. I'm an independent
+          freelancer and blogger. <br />
           <br /> I love to write blogs and read books. I believe everything is
           an Art when you put your consciousness in it. You can connect with me
           via social links.
         </Main>
+
+        <BigTitle text="ABOUT" top="10%" left="5%" />
       </Box>
     </ThemeProvider>
   );
-}
+};
+
 export default AboutPage;
