@@ -72,10 +72,10 @@ function AboutPage(props) {
           />
         </Sapceman>
         <Main>
-          I'm a front-end developer located in India. I love to create simple
-          yet beautiful websites with great user experience.
+          I'm a full stack developer located in India. I love to create 
+          beautiful websites with great user experience.
           <br />
-          <br /> I'm interested in the whole frontend stack Like trying new
+          <br /> I'm interested in the whole frontend and backend stack Like trying new
           things and building great projects. I'm an independent freelancer and
           blogger. <br />
           <br /> I love to write blogs and read books. I believe everything is
