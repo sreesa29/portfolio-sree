@@ -1,6 +1,6 @@
 import React from "react";
 import { darkTheme } from "./Themes.jsx";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider, keyframes } from "styled-components";
 import { Design, Develope } from "./AllSvgs.jsx";
 import LogoComponent from "../subComponents/LogoComponent.jsx";
 import SocialIcons from "../subComponents/SocialIcons.jsx";
@@ -11,9 +11,22 @@ const Box = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+ overflow: hidden;
+`;
+
+const float = keyframes`
+0% {transform : translateY(-10px)}
+50% {transform : translateY(15px) translateX(15px)}
+100% {transform : translateY(-10px)}
+`
+
+
+const Sapceman = styled.div`
+  position: absolute;
+  top:10%;
+  right:5%;
+  width:20vw;
+  animation: ${float}
 `;
 
 
@@ -25,7 +38,9 @@ function AboutPage(props) {
         <SocialIcons theme="dark" />
         <PowerButton />
         <ParticleComponent theme='dark' />
-      
+        <Sapceman>
+        <img src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/spaceman.png" alt="spacmanpic" />
+        </Sapceman>
       </Box>
     </ThemeProvider>
   );
