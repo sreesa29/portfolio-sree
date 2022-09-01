@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
+import {darkTheme} from './Themes.jsx';
 import {motion} from 'framer-motion';
 import LogoComponent from '../subComponents/LogoComponent.jsx';
 import SocialIcons from '../subComponents/SocialIcons.jsx';
@@ -81,7 +81,7 @@ const WorkPage = () => {
 
 
     return (
-        <ThemeProvider theme={DarkTheme}>
+        <ThemeProvider theme={darkTheme}>
 <Box>
 
 <LogoComponent theme='dark'/>
@@ -96,7 +96,7 @@ const WorkPage = () => {
          }
      </Main>
 <Rotate ref={yinyang}>
-    <YinYang width={80} height={80} fill={DarkTheme.text} />
+    <YinYang width={80} height={80} fill={darkTheme.text} />
 </Rotate>
 
 <BigTitlte text="WORK" top='10%' right="20%" />
