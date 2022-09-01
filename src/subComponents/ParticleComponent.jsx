@@ -20,7 +20,6 @@ z-index:0;
 
 function ParticleComponent(props) {
   
-  
   const particlesInit = useCallback(async (engine) => {
         console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -35,7 +34,11 @@ function ParticleComponent(props) {
    
   return (
     <Box>
-       <Particles options={props.theme === "light" ? configLight : configDark} />
+     <Particles
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options= {configDark}
+        />
     </Box>
   );
 }
