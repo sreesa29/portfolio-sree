@@ -7,11 +7,9 @@ const Box = styled(motion.div)`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  width: 55vw;
+  width: 65vw;
   height: 55vh;
   display: flex;
-
   background: linear-gradient(
         to right,
         ${(props) => props.theme.body} 50%,
@@ -30,7 +28,6 @@ const Box = styled(motion.div)`
   border-right: 2px solid ${(props) => props.theme.text};
   z-index: 1;
 `;
-
 const SubBox = styled.div`
   width: 50%;
   position: relative;
@@ -50,11 +47,9 @@ const Text = styled.div`
   color: ${(props) => props.theme.body};
   padding: 2rem;
   cursor: pointer;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
   & > *:last-child {
     color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
     font-size: calc(0.5rem + 1.5vw);
@@ -62,10 +57,10 @@ const Text = styled.div`
   }
 `;
 
-function Intro(props) {
+const Intro = () => {
   return (
     <Box
-      initial={{ height: "0" }}
+      initial={{ height: 0 }}
       animate={{ height: "55vh" }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
@@ -82,14 +77,11 @@ function Intro(props) {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          <img
-            src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png"
-            className="pic"
-            alt="Profile Pic"
-          />
+          <img className="pic" src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png" alt="Profile Pic" />
         </motion.div>
       </SubBox>
     </Box>
   );
-}
+};
+
 export default Intro;
