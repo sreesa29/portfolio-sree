@@ -77,7 +77,11 @@ const Intro = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          <img className="pic" src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png" alt="Profile Pic" />
+          <img
+            className="pic"
+            src="https://cdn.glitch.global/bd8e117c-94ab-430e-a44c-0d5960c1b170/profile-img.png"
+            alt="Profile Pic"
+          />
         </motion.div>
       </SubBox>
     </Box>
